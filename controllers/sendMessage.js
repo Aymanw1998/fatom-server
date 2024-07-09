@@ -1,7 +1,7 @@
-const accountSid = 'ACd829e75909b477dd95ba129fb4e26803';
-const authToken = '7792c4c8c6f47ebd0312bd35bf4ca44b';
+// const accountSid = 'ACd829e75909b477dd95ba129fb4e26803';
+// const authToken = '7792c4c8c6f47ebd0312bd35bf4ca44b';
 const twilio = require('twilio');
-const client = new twilio(accountSid, authToken);
+const client = new twilio(process.env.accountSid, process.env.authToken);
 
 const send = async(req,res) => {
   await sendMessage(req.body);
